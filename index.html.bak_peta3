@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0c1511">
+<title>Kinstead — Jelajahi Dunia 1914</title>
+<link rel="stylesheet" href="./src/ui/game.css">
+<link rel="stylesheet" href="./src/ui/strategy.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/three.module.js",
+    "three/addons/": "./vendor/three/addons/"
+  }
+}
+</script>
+<style>
+  html, body {
+    touch-action: pan-x pan-y; /* Cegah zoom pinch */
+    -webkit-user-select: none; /* Cegah blok teks */
+    user-select: none;
+    overscroll-behavior: none; /* Cegah layar mental */
+  }
+  * {
+    -webkit-touch-callout: none;
+  }
+</style>
+</head>
+<body>
+<div id="app">
+  <canvas id="game-canvas"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <section id="loading-screen" class="screen loading-screen">
+    <div class="loading-panel">
+      <div class="brand-mark">K</div>
+      <h1>KINSTEAD</h1>
+      <p class="eyebrow">Pembangun Dunia · Desa yang Dapat Dijelajahi</p>
+      <div class="loading-track"><div id="loading-bar"></div></div>
+      <p id="loading-label" class="loading-label">Membaca manifes Kinstead</p>
+      <p id="loading-tip" class="loading-tip"></p>
+    </div>
+  </section>
+
+  <section id="menu-screen" class="screen menu-screen hidden">
+    <div class="menu-backdrop" aria-hidden="true"></div>
+    <header class="menu-top">
+      <div class="brand">
+        <div class="brand-mark">K</div>
+        <div class="brand-text">
+          <h1>KINSTEAD</h1>
+          <p class="eyebrow">Jelajahi dunia tahun 1914</p>
+        </div>
+      </div>
+      <nav class="menu-nav">
+        <button id="menu-atlas" class="ghost">Atlas Aset</button>
+        <button id="menu-help" class="ghost">Kontrol</button>
+        <button id="menu-settings" class="ghost">Pengaturan</button>
+      </nav>
+    </header>
+
+    <div class="menu-body">
+      <div class="menu-intro">
+        <p class="kicker">Dunia sejarah bergaya low-poly</p>
+        <h2>Jelajahi jalan desa.<br>Temui penduduknya.</h2>
+        <p class="lede">Setiap bangunan, hewan, dan tokoh dimuat dari pustaka GLB Kinstead. Pilih penduduk, lalu berjalan, berlari, dan melompat menjelajahi desa dan wilayah sekitarnya.</p>
+        <div class="selected-character">
+          <span class="selected-label">Penduduk terpilih</span>
+          <strong id="menu-character-name">—</strong>
+          <span id="menu-character-role" class="selected-role">—</span>
+        </div>
+        <button id="menu-play" class="primary big">Masuki Kinstead <span aria-hidden="true">→</span></button>
+        <p id="menu-status" class="menu-status"></p>
+      </div>
+
+      <aside class="character-panel">
+        <div class="panel-head">
+          <h3>Pilih penduduk Anda</h3>
+          <span class="hint">30 tokoh</span>
+        </div>
+        <div id="menu-character-grid" class="character-grid"></div>
+      </aside>
+    </div>
+
+    <footer class="menu-footer">
+      <span>WASD bergerak · Shift berlari · Spasi melompat · Geser melihat · E bicara</span>
+      <span class="dot">·</span>
+      <span>Dibuat dengan Three.js</span>
+    </footer>
+  </section>
+
+  <div id="hud" class="hud hidden">
+    <div class="hud-top">
+      <div class="hud-brand"><span class="brand-mark small">K</span><span>KINSTEAD</span></div>
+      <div class="hud-status">
+        <span id="hud-region">Kinstead</span>
+        <span class="sep">·</span>
+        <span id="hud-character">Penduduk</span>
+        <span class="sep">·</span>
+        <span id="hud-time">Hari 1 · 06:00</span>
+        <span class="sep">·</span>
+        <span id="hud-money">🪙 50 koin</span>
+        <span class="sep">·</span>
+        <span id="hud-tool">Tangan Kosong</span>
+        <span id="hud-fps" class="fps">60 fps</span>
+      </div>
+      <div class="hud-actions">
+        <button id="btn-strategy-map" class="pill" title="Peta Strategi & Desa">🗺️ Peta Desa</button>
+        <button id="btn-pause" class="icon" title="Jeda (Esc)" aria-label="Jeda">Ⅱ</button>
+        <button id="btn-characters" class="icon" title="Tokoh" aria-label="Tokoh">☺</button>
+        <button id="btn-questlog" class="icon" title="Misi" aria-label="Misi">📜</button>
+        <button id="btn-inventory" class="icon" title="Inventaris (I)" aria-label="Inventaris">🎒</button>
+        <button id="btn-settings" class="icon" title="Pengaturan" aria-label="Pengaturan">⚙</button>
+        <button id="btn-help" class="icon" title="Kontrol" aria-label="Kontrol">?</button>
+        <button id="btn-atlas" class="pill" title="Atlas aset">Atlas</button>
+      </div>
+    </div>
+
+    <div id="interaction-prompt" class="interaction-prompt hidden">
+      <span id="interaction-text">Tekan <b>E</b> untuk berbicara</span>
+    </div>
+
+    <div id="quest-notification" class="quest-notification hidden">
+      <div class="quest-notification-content">
+        <div class="quest-notification-title" id="quest-notification-title">Misi Baru</div>
+        <div class="quest-notification-desc" id="quest-notification-desc"></div>
+      </div>
+    </div>
+
+    <div class="controls-hint" aria-hidden="true">
+      <span><b>WASD</b> gerak</span>
+      <span><b>Shift</b> lari</span>
+      <span><b>Spasi</b> lompat</span>
+      <span><b>E</b> bicara/interaksi</span>
+      <span><b>Geser</b> lihat</span>
+    </div>
+
+    <div id="mobile-controls" class="mobile-controls hidden">
+      <div id="joystick" class="joystick" aria-label="Tuas gerak">
+        <div id="joystick-knob" class="joystick-knob"></div>
+      </div>
+      <div class="mobile-buttons">
+        <button id="btn-interact" class="round">AKSI</button>
+        <button id="btn-attack" class="round">GUNAKAN</button>
+        <button id="btn-run" class="round">LARI</button>
+        <button id="btn-jump" class="round jump">LOMPAT</button>
+      </div>
+    </div>
+
+    <div class="reticle" aria-hidden="true"></div>
+  </div>
+
+  <section id="strategy-screen" class="screen overlay hidden">
+    <div class="modal strategy-modal">
+      <header class="modal-head">
+        <div>
+          <h2>Peta Strategi & Desa</h2>
+          <p class="muted">Pilih desa untuk dikunjungi atau dipantau ekonominya</p>
+        </div>
+        <button id="strategy-close" class="icon" aria-label="Tutup peta strategi">×</button>
+      </header>
+      <div class="strategy-content-grid">
+        <div id="strategy-map-view" class="strategy-map-view">
+        </div>
+        <div class="strategy-info-panel">
+          <h3 id="strategy-selected-title">Pilih Desa</h3>
+          <p id="strategy-selected-desc" class="muted">Klik salah satu titik pemukiman pada peta strategi di sebelah kiri untuk melihat detail populasi, bangunan, dan sumber daya.</p>
+          <div id="strategy-details" class="strategy-details hidden">
+            <div class="strategy-stat"><span>Koordinat:</span> <strong id="strategy-stat-coord">-</strong></div>
+            <div class="strategy-stat"><span>Radius Wilayah:</span> <strong id="strategy-stat-radius">-</strong></div>
+            <div class="strategy-stat"><span>Fasilitas / Bangunan:</span> <strong id="strategy-stat-pool">-</strong></div>
+          </div>
+          <div class="strategy-actions">
+            <button id="btn-visit-village" class="primary big" disabled>KUNJUNGI DESA <span>→</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="transition-overlay" class="transition-overlay hidden">
+    <div class="transition-spinner"></div>
+    <div id="transition-text" class="transition-text">Memuat Wilayah Desa...</div>
+  </div>
+
+  <section id="pause-screen" class="screen pause-screen hidden">
+    <div class="modal pause-panel">
+      <div class="brand-mark">K</div>
+      <h2>Dijeda</h2>
+      <p class="muted">Kinstead bisa menunggu.</p>
+      <div class="stack">
+        <button id="pause-resume" class="primary">Lanjutkan</button>
+        <button id="pause-characters" class="ghost">Ganti penduduk</button>
+        <button id="pause-settings" class="ghost">Pengaturan</button>
+        <button id="pause-atlas" class="ghost">Atlas Aset</button>
+        <button id="pause-help" class="ghost">Kontrol</button>
+        <button id="pause-menu" class="danger">Kembali ke menu</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="settings-modal" class="screen overlay hidden">
+    <div class="modal">
+      <header class="modal-head">
+        <h2>Pengaturan</h2>
+        <button id="settings-close" class="icon" aria-label="Tutup pengaturan">×</button>
+      </header>
+      <div class="field">
+        <label for="settings-quality">Kualitas grafis</label>
+        <select id="settings-quality">
+          <option value="high">Tinggi — bayangan detail</option>
+          <option value="medium">Sedang</option>
+          <option value="low">Rendah — paling cepat</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="settings-sensitivity">Sensitivitas kamera</label>
+        <input id="settings-sensitivity" type="range" min="0.4" max="2" step="0.05" value="1">
+      </div>
+      <label class="check"><input id="settings-invert" type="checkbox"> Balik arah pandang vertikal</label>
+      <label class="check"><input id="settings-fps" type="checkbox" checked> Tampilkan penghitung frame</label>
+      <footer class="modal-foot">
+        <button id="settings-reset" class="ghost">Kembalikan bawaan</button>
+      </footer>
+    </div>
+  </section>
+
+  <section id="help-modal" class="screen overlay hidden">
+    <div class="modal">
+      <header class="modal-head">
+        <h2>Kontrol</h2>
+        <button id="help-close" class="icon" aria-label="Tutup kontrol">×</button>
+      </header>
+      <div class="help-grid">
+        <div><kbd>W A S D</kbd><span>Bergerak</span></div>
+        <div><kbd>Shift</kbd><span>Berlari</span></div>
+        <div><kbd>Spasi</kbd><span>Melompat</span></div>
+        <div><kbd>E</kbd><span>Bicara dengan penduduk terdekat</span></div>
+        <div><kbd>Geser</kbd><span>Putar kamera</span></div>
+        <div><kbd>Gulir</kbd><span>Perbesar</span></div>
+        <div><kbd>Esc</kbd><span>Jeda / tutup</span></div>
+        <div><kbd>M</kbd><span>Buka / tutup peta strategi</span></div>
+        <div><kbd>P</kbd><span>Jeda</span></div>
+      </div>
+      <p class="muted">Pada layar sentuh gunakan tuas kiri, lalu tombol LARI dan LOMPAT. Cubit untuk memperbesar dan geser di area lain untuk melihat sekitar.</p>
+    </div>
+  </section>
+
+  <section id="atlas-screen" class="screen atlas-screen hidden">
+    <header class="atlas-head">
+      <div>
+        <h2>Atlas Aset</h2>
+        <p id="atlas-subtitle" class="muted">Merender pustaka Kinstead…</p>
+      </div>
+      <div id="atlas-filters" class="filters">
+        <button data-filter="all" class="active">Semua</button>
+        <button data-filter="buildings">Bangunan</button>
+        <button data-filter="characters">Penduduk</button>
+        <button data-filter="animals">Hewan</button>
+        <button data-filter="nature">Alam</button>
+        <button data-filter="decorations">Dekorasi</button>
+      </div>
+      <button id="atlas-close" class="icon" aria-label="Tutup atlas">×</button>
+    </header>
+    <div id="atlas-grid" class="atlas-grid"></div>
+  </section>
+
+  <section id="dialog-screen" class="screen dialog-screen hidden">
+    <div class="dialog-backdrop"></div>
+    <div class="dialog-panel">
+      <div class="dialog-header">
+        <div class="dialog-npc-info">
+          <div class="dialog-npc-avatar" id="dialog-npc-avatar">K</div>
+          <div>
+            <div class="dialog-npc-name" id="dialog-npc-name">Nama NPC</div>
+            <div class="dialog-npc-title" id="dialog-npc-title">Judul</div>
+          </div>
+        </div>
+        <button id="dialog-close" class="icon" aria-label="Tutup dialog">×</button>
+      </div>
+      <div class="dialog-body">
+        <div class="dialog-text" id="dialog-text"></div>
+        <div class="dialog-choices" id="dialog-choices"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="questlog-screen" class="screen overlay hidden">
+    <div class="modal questlog-modal">
+      <header class="modal-head">
+        <h2>Catatan Misi</h2>
+        <button id="questlog-close" class="icon" aria-label="Tutup catatan misi">×</button>
+      </header>
+      <div class="questlog-tabs">
+        <button class="questlog-tab active" data-tab="active">Aktif</button>
+        <button class="questlog-tab" data-tab="completed">Selesai</button>
+        <button class="questlog-tab" data-tab="failed">Gagal</button>
+      </div>
+      <div id="questlog-content" class="questlog-content"></div>
+    </div>
+  </section>
+
+  <section id="inventory-screen" class="screen overlay hidden">
+    <div class="modal inventory-modal">
+      <header class="modal-head">
+        <h2>Inventaris</h2>
+        <button id="inventory-close" class="icon" aria-label="Tutup inventaris">×</button>
+      </header>
+      <div class="inventory-filters">
+        <button class="inventory-filter active" data-filter="all">Semua</button>
+        <button class="inventory-filter" data-filter="bahan_alam">Bahan Alam</button>
+        <button class="inventory-filter" data-filter="makanan">Makanan</button>
+        <button class="inventory-filter" data-filter="peralatan">Peralatan</button>
+        <button class="inventory-filter" data-filter="barang_perdagangan">Perdagangan</button>
+        <button class="inventory-filter" data-filter="barang_quest">Misi</button>
+      </div>
+      <div id="inventory-grid" class="inventory-grid"></div>
+      <div id="inventory-detail" class="inventory-detail hidden">
+        <div class="inventory-detail-header">
+          <span id="inventory-detail-icon" class="inventory-detail-icon">📦</span>
+          <div>
+            <div id="inventory-detail-name" class="inventory-detail-name">Nama Item</div>
+            <div id="inventory-detail-category" class="inventory-detail-category">Kategori</div>
+          </div>
+        </div>
+        <p id="inventory-detail-desc" class="inventory-detail-desc"></p>
+        <div class="inventory-detail-actions">
+          <button id="inventory-use" class="primary small">Gunakan</button>
+          <button id="inventory-drop" class="ghost small">Hapus</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop-screen" class="screen overlay hidden">
+    <div class="modal shop-modal">
+      <header class="modal-head">
+        <div>
+          <h2 id="shop-title">Toko</h2>
+          <p id="shop-subtitle" class="muted">Jual Beli Barang</p>
+        </div>
+        <button id="shop-close" class="icon" aria-label="Tutup toko">×</button>
+      </header>
+      <div class="shop-tabs">
+        <button class="shop-tab active" data-tab="buy">Beli</button>
+        <button class="shop-tab" data-tab="sell">Jual</button>
+      </div>
+      <div class="shop-balance">Saldo: <span id="shop-balance">0 koin</span></div>
+      <div id="shop-content" class="shop-content"></div>
+    </div>
+  </section>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <noscript>
+    <div class="noscript">Kinstead membutuhkan JavaScript dan WebGL aktif.</div>
+  </noscript>
+</div>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

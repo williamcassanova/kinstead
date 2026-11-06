@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Kinstead World Builder</title>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/three.module.js",
+    "three/addons/": "./vendor/three/addons/"
+  }
+}
+</script>
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#151a18;color:#eee;font-family:Arial}
+header{height:58px;padding:10px 15px;background:#202923;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #39443b}
+header strong{font-size:17px}
+header small{color:#aab9aa}
+button,select,input{font:inherit}
+button{border:0;border-radius:6px;background:#527c50;color:white;padding:10px;cursor:pointer}
+button:disabled{opacity:.4}
+main{display:grid;grid-template-columns:270px 1fr;height:calc(100vh - 58px)}
+aside{background:#1b211d;padding:13px;overflow:auto;border-right:1px solid #39443b}
+h3{font-size:14px;margin:5px 0 12px}
+label{display:block;font-size:12px;color:#aebbae;margin:13px 0 6px}
+select,input{width:100%;padding:10px;background:#29332c;color:white;border:1px solid #465348;border-radius:6px}
+button.full{width:100%;margin-top:8px}
+.group{border-bottom:1px solid #39443b;padding-bottom:14px;margin-bottom:14px}
+#viewport{position:relative;min-width:0;background:#252c28;overflow:hidden}
+#canvas{position:absolute;inset:0}
+#toolbar{position:absolute;top:12px;left:12px;display:flex;gap:7px;flex-wrap:wrap;z-index:2}
+#toolbar button{background:#293a30;border:1px solid #61705f}
+#hint{position:absolute;bottom:12px;left:12px;background:#172019df;padding:10px;border-radius:7px;font-size:12px;pointer-events:none}
+#status{font-size:12px;color:#aebbae;line-height:1.5;margin-top:12px;overflow-wrap:anywhere}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+#objects{font-size:12px;color:#c4d0c5;line-height:1.6}
+@media(max-width:700px){
+ main{grid-template-columns:1fr;grid-template-rows: minmax(300px,55vh) 1fr;height:auto;min-height:calc(100vh - 58px)}
+ #viewport{grid-row:1;min-height:300px}
+ aside{grid-row:2;max-height:none}
+}
+</style>
+</head>
+<body>
+<header>
+ <div>
+  <strong>🌍 KINSTEAD WORLD BUILDER</strong><br>
+  <small>3D World Editor</small>
+ </div>
+ <button id="export">EXPORT GLB</button>
+</header>
+
+<main>
+ <section id="viewport">
+  <div id="canvas"></div>
+  <div id="toolbar">
+   <button id="modePlace">PLACE</button>
+   <button id="modeCamera">CAMERA</button>
+   <button id="undo">UNDO</button>
+  </div>
+  <div id="hint">Pilih asset, lalu sentuh permukaan dunia untuk menempatkannya.</div>
+ </section>
+
+ <aside>
+  <div class="group">
+   <h3>ASSET LIBRARY</h3>
+   <label>Kategori</label>
+   <select id="category">
+    <option value="all">Semua kategori</option>
+   </select>
+   <label>Model GLB</label>
+   <select id="asset"></select>
+
+<label>Model di dalam GLB</label>
+<select id="part">
+<option value="">Belum ada model</option>
+</select>
+
+<button class="full" id="load">LOAD ASSET</button>
+   <div id="status">Menghubungkan asset library...</div>
+  </div>
+
+  <div class="group">
+   <h3>OBJECT SETTINGS</h3>
+   <label>Objek terpilih</label>
+   <div id="selected" style="font-size:12px;color:#b7c6b8">Belum ada objek</div>
+
+   <label>Rotasi Y (derajat)</label>
+   <input id="rotation" type="range" min="0" max="360" value="0">
+
+   <label>Ukuran</label>
+   <input id="scale" type="range" min="10" max="300" value="100">
+   <div class="row">
+    <button id="duplicate">DUPLICATE</button>
+    <button id="delete">DELETE</button>
+   </div>
+  </div>
+
+  <div class="group">
+   <h3>WORLD OBJECTS</h3>
+   <div id="objects">Belum ada objek.</div>
+  </div>
+ </aside>
+</main>
+
+<script type="module" src="./src/editor.js"></script>
+</body>
+</html>

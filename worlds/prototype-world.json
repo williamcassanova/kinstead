@@ -1,0 +1,34 @@
+{
+  "id": "prototype_world",
+  "nama": "Prototype Kinstead 1914",
+  "versi": 1,
+  "wilayah": [
+    {
+      "id": "kota_a",
+      "nama": "Kota A",
+      "pemilik": "Klan X",
+      "koordinat_x": 10,
+      "koordinat_z": 20,
+      "populasi": 1000,
+      "pajak_dasar": 50
+    },
+    {
+      "id": "kota_b",
+      "nama": "Kota B",
+      "pemilik": "Klan Y",
+      "koordinat_x": 60,
+      "koordinat_z": -15,
+      "populasi": 1750,
+      "pajak_dasar": 75
+    },
+    {
+      "id": "kota_c",
+      "nama": "Kota C",
+      "pemilik": "Klan Z",
+      "koordinat_x": -40,
+      "koordinat_z": 35,
+      "populasi": 800,
+      "pajak_dasar": 40
+    }
+  ]
+}

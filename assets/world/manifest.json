@@ -1,0 +1,1720 @@
+{
+  "generatedAt": "2026-11-04T03:04:35.640166+00:00",
+  "worldScale": 10,
+  "note": "Source GLB units are Kinstead tiles. The game multiplies every asset by worldScale so a villager is roughly 1.4-1.7 m tall.",
+  "categories": {
+    "nature": {
+      "collection": "assets/world/collections/kinstead-nature-library.glb",
+      "items": [
+        {
+          "id": "pine",
+          "label": "Pine",
+          "role": null,
+          "sourceNode": "pine",
+          "size": [
+            0.3352,
+            0.5891,
+            0.3229
+          ],
+          "meshCount": 2,
+          "file": "assets/extracted/nature/pine.glb"
+        },
+        {
+          "id": "round-tree",
+          "label": "Round Tree",
+          "role": null,
+          "sourceNode": "round_tree",
+          "size": [
+            0.3688,
+            0.5066,
+            0.3416
+          ],
+          "meshCount": 2,
+          "file": "assets/extracted/nature/round-tree.glb"
+        },
+        {
+          "id": "birch-tree",
+          "label": "Birch Tree",
+          "role": null,
+          "sourceNode": "birch_tree",
+          "size": [
+            0.227,
+            0.5756,
+            0.2058
+          ],
+          "meshCount": 2,
+          "file": "assets/extracted/nature/birch-tree.glb"
+        },
+        {
+          "id": "bush",
+          "label": "Bush",
+          "role": null,
+          "sourceNode": "bush",
+          "size": [
+            0.2303,
+            0.1326,
+            0.2045
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/nature/bush.glb"
+        },
+        {
+          "id": "rock",
+          "label": "Rock",
+          "role": null,
+          "sourceNode": "rock",
+          "size": [
+            0.1868,
+            0.1121,
+            0.1588
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/nature/rock.glb"
+        },
+        {
+          "id": "grass-tuft",
+          "label": "Grass Tuft",
+          "role": null,
+          "sourceNode": "grass_tuft",
+          "size": [
+            0.0476,
+            0.075,
+            0.0355
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/nature/grass-tuft.glb"
+        },
+        {
+          "id": "wildflower",
+          "label": "Wildflower",
+          "role": null,
+          "sourceNode": "wildflower",
+          "size": [
+            0.0476,
+            0.075,
+            0.0355
+          ],
+          "meshCount": 2,
+          "file": "assets/extracted/nature/wildflower.glb"
+        },
+        {
+          "id": "crop",
+          "label": "Crop",
+          "role": null,
+          "sourceNode": "crop",
+          "size": [
+            0.051,
+            0.0383,
+            0.051
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/nature/crop.glb"
+        },
+        {
+          "id": "fence-post",
+          "label": "Fence Post",
+          "role": null,
+          "sourceNode": "fence_post",
+          "size": [
+            0.016,
+            0.085,
+            0.016
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/nature/fence-post.glb"
+        },
+        {
+          "id": "fence-rail",
+          "label": "Fence Rail",
+          "role": null,
+          "sourceNode": "fence_rail",
+          "size": [
+            1.0,
+            0.012,
+            0.01
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/nature/fence-rail.glb"
+        }
+      ]
+    },
+    "animals": {
+      "collection": "assets/world/collections/kinstead-animals-library.glb",
+      "items": [
+        {
+          "id": "deer",
+          "label": "DEER",
+          "role": null,
+          "sourceNode": "DEER",
+          "size": [
+            0.0589,
+            0.2603,
+            0.2233
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/animals/deer.glb"
+        },
+        {
+          "id": "fox",
+          "label": "FOX",
+          "role": null,
+          "sourceNode": "FOX",
+          "size": [
+            0.0242,
+            0.0694,
+            0.1323
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/animals/fox.glb"
+        },
+        {
+          "id": "rabbit",
+          "label": "RABBIT",
+          "role": null,
+          "sourceNode": "RABBIT",
+          "size": [
+            0.025,
+            0.0386,
+            0.035
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/animals/rabbit.glb"
+        },
+        {
+          "id": "duck",
+          "label": "DUCK",
+          "role": null,
+          "sourceNode": "DUCK",
+          "size": [
+            0.0322,
+            0.0384,
+            0.0577
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/animals/duck.glb"
+        },
+        {
+          "id": "sheep",
+          "label": "SHEEP",
+          "role": null,
+          "sourceNode": "SHEEP",
+          "size": [
+            0.0756,
+            0.0972,
+            0.1161
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/animals/sheep.glb"
+        },
+        {
+          "id": "cow",
+          "label": "COW",
+          "role": null,
+          "sourceNode": "COW",
+          "size": [
+            0.0819,
+            0.147,
+            0.2151
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/animals/cow.glb"
+        },
+        {
+          "id": "chicken",
+          "label": "CHICKEN",
+          "role": null,
+          "sourceNode": "CHICKEN",
+          "size": [
+            0.0187,
+            0.0364,
+            0.0291
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/animals/chicken.glb"
+        }
+      ]
+    },
+    "decorations": {
+      "collection": "assets/world/collections/kinstead-decorations-library.glb",
+      "items": [
+        {
+          "id": "bench",
+          "label": "Bench",
+          "role": null,
+          "sourceNode": "Bench",
+          "size": [
+            0.17,
+            0.09,
+            0.052
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/decorations/bench.glb"
+        },
+        {
+          "id": "street-lamp",
+          "label": "Street Lamp",
+          "role": null,
+          "sourceNode": "Street Lamp",
+          "size": [
+            0.0453,
+            0.398,
+            0.0453
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/decorations/street-lamp.glb"
+        },
+        {
+          "id": "wood-fence",
+          "label": "Wood Fence",
+          "role": null,
+          "sourceNode": "Wood Fence",
+          "size": [
+            0.6186,
+            0.075,
+            0.4185
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/decorations/wood-fence.glb"
+        },
+        {
+          "id": "stone-fence",
+          "label": "Stone Fence",
+          "role": null,
+          "sourceNode": "Stone Fence",
+          "size": [
+            0.6187,
+            0.075,
+            0.4186
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/decorations/stone-fence.glb"
+        },
+        {
+          "id": "hedge",
+          "label": "Hedge",
+          "role": null,
+          "sourceNode": "Hedge",
+          "size": [
+            0.35,
+            0.085,
+            0.25
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/decorations/hedge.glb"
+        },
+        {
+          "id": "flowers",
+          "label": "Flowers",
+          "role": null,
+          "sourceNode": "Flowers",
+          "size": [
+            0.2059,
+            0.0488,
+            0.1623
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/decorations/flowers.glb"
+        },
+        {
+          "id": "barrel",
+          "label": "Barrel",
+          "role": null,
+          "sourceNode": "Barrel",
+          "size": [
+            0.099,
+            0.117,
+            0.0975
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/decorations/barrel.glb"
+        },
+        {
+          "id": "crate",
+          "label": "Crate",
+          "role": null,
+          "sourceNode": "Crate",
+          "size": [
+            0.1117,
+            0.09,
+            0.1117
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/decorations/crate.glb"
+        },
+        {
+          "id": "sign",
+          "label": "Sign",
+          "role": null,
+          "sourceNode": "Sign",
+          "size": [
+            0.18,
+            0.1,
+            0.014
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/decorations/sign.glb"
+        },
+        {
+          "id": "logs",
+          "label": "Logs",
+          "role": null,
+          "sourceNode": "Logs",
+          "size": [
+            0.204,
+            0.1581,
+            0.182
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/decorations/logs.glb"
+        },
+        {
+          "id": "vegetable-patch",
+          "label": "Vegetable Patch",
+          "role": null,
+          "sourceNode": "Vegetable Patch",
+          "size": [
+            0.2,
+            0.0495,
+            0.16
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/decorations/vegetable-patch.glb"
+        },
+        {
+          "id": "washing-line",
+          "label": "Washing Line",
+          "role": null,
+          "sourceNode": "Washing Line",
+          "size": [
+            0.272,
+            0.16,
+            0.012
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/decorations/washing-line.glb"
+        },
+        {
+          "id": "beehives",
+          "label": "Beehives",
+          "role": null,
+          "sourceNode": "Beehives",
+          "size": [
+            0.13,
+            0.072,
+            0.06
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/decorations/beehives.glb"
+        },
+        {
+          "id": "handcart",
+          "label": "Handcart",
+          "role": null,
+          "sourceNode": "Handcart",
+          "size": [
+            0.1799,
+            0.08,
+            0.2059
+          ],
+          "meshCount": 1,
+          "file": "assets/extracted/decorations/handcart.glb"
+        }
+      ]
+    },
+    "villagers": {
+      "collection": "assets/world/collections/kinstead-villagers-library.glb",
+      "items": [
+        {
+          "id": "villager-farmer-1000",
+          "label": "Farmer 1000",
+          "role": "farmer",
+          "sourceNode": "Villager_farmer_1000",
+          "size": [
+            0.0914,
+            0.1358,
+            0.0872
+          ],
+          "meshCount": 7,
+          "file": "assets/extracted/villagers/villager-farmer-1000.glb"
+        },
+        {
+          "id": "villager-farmer-1007",
+          "label": "Farmer 1007",
+          "role": "farmer",
+          "sourceNode": "Villager_farmer_1007",
+          "size": [
+            0.0892,
+            0.1298,
+            0.0666
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-farmer-1007.glb"
+        },
+        {
+          "id": "villager-farmer-1014",
+          "label": "Farmer 1014",
+          "role": "farmer",
+          "sourceNode": "Villager_farmer_1014",
+          "size": [
+            0.0966,
+            0.1502,
+            0.0923
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-farmer-1014.glb"
+        },
+        {
+          "id": "villager-builder-1031",
+          "label": "Builder 1031",
+          "role": "builder",
+          "sourceNode": "Villager_builder_1031",
+          "size": [
+            0.0966,
+            0.1628,
+            0.0813
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-builder-1031.glb"
+        },
+        {
+          "id": "villager-builder-1038",
+          "label": "Builder 1038",
+          "role": "builder",
+          "sourceNode": "Villager_builder_1038",
+          "size": [
+            0.0895,
+            0.1263,
+            0.0752
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-builder-1038.glb"
+        },
+        {
+          "id": "villager-builder-1045",
+          "label": "Builder 1045",
+          "role": "builder",
+          "sourceNode": "Villager_builder_1045",
+          "size": [
+            0.093,
+            0.1568,
+            0.0782
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-builder-1045.glb"
+        },
+        {
+          "id": "villager-worker-1062",
+          "label": "Worker 1062",
+          "role": "worker",
+          "sourceNode": "Villager_worker_1062",
+          "size": [
+            0.092,
+            0.1312,
+            0.0733
+          ],
+          "meshCount": 7,
+          "file": "assets/extracted/villagers/villager-worker-1062.glb"
+        },
+        {
+          "id": "villager-worker-1069",
+          "label": "Worker 1069",
+          "role": "worker",
+          "sourceNode": "Villager_worker_1069",
+          "size": [
+            0.0893,
+            0.1533,
+            0.0665
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-worker-1069.glb"
+        },
+        {
+          "id": "villager-worker-1076",
+          "label": "Worker 1076",
+          "role": "worker",
+          "sourceNode": "Villager_worker_1076",
+          "size": [
+            0.0902,
+            0.1295,
+            0.0672
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-worker-1076.glb"
+        },
+        {
+          "id": "villager-fisher-1093",
+          "label": "Fisher 1093",
+          "role": "fisher",
+          "sourceNode": "Villager_fisher_1093",
+          "size": [
+            0.0907,
+            0.1542,
+            0.0722
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-fisher-1093.glb"
+        },
+        {
+          "id": "villager-fisher-1100",
+          "label": "Fisher 1100",
+          "role": "fisher",
+          "sourceNode": "Villager_fisher_1100",
+          "size": [
+            0.0961,
+            0.158,
+            0.0766
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-fisher-1100.glb"
+        },
+        {
+          "id": "villager-fisher-1107",
+          "label": "Fisher 1107",
+          "role": "fisher",
+          "sourceNode": "Villager_fisher_1107",
+          "size": [
+            0.0903,
+            0.1282,
+            0.0674
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-fisher-1107.glb"
+        },
+        {
+          "id": "villager-shop-1124",
+          "label": "Shop 1124",
+          "role": "shop",
+          "sourceNode": "Villager_shop_1124",
+          "size": [
+            0.096,
+            0.1628,
+            0.0717
+          ],
+          "meshCount": 7,
+          "file": "assets/extracted/villagers/villager-shop-1124.glb"
+        },
+        {
+          "id": "villager-shop-1131",
+          "label": "Shop 1131",
+          "role": "shop",
+          "sourceNode": "Villager_shop_1131",
+          "size": [
+            0.0954,
+            0.1395,
+            0.0712
+          ],
+          "meshCount": 7,
+          "file": "assets/extracted/villagers/villager-shop-1131.glb"
+        },
+        {
+          "id": "villager-shop-1138",
+          "label": "Shop 1138",
+          "role": "shop",
+          "sourceNode": "Villager_shop_1138",
+          "size": [
+            0.0949,
+            0.1687,
+            0.0709
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-shop-1138.glb"
+        },
+        {
+          "id": "villager-clerk-1155",
+          "label": "Clerk 1155",
+          "role": "clerk",
+          "sourceNode": "Villager_clerk_1155",
+          "size": [
+            0.0918,
+            0.1594,
+            0.0755
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-clerk-1155.glb"
+        },
+        {
+          "id": "villager-clerk-1162",
+          "label": "Clerk 1162",
+          "role": "clerk",
+          "sourceNode": "Villager_clerk_1162",
+          "size": [
+            0.089,
+            0.1288,
+            0.0664
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-clerk-1162.glb"
+        },
+        {
+          "id": "villager-clerk-1169",
+          "label": "Clerk 1169",
+          "role": "clerk",
+          "sourceNode": "Villager_clerk_1169",
+          "size": [
+            0.089,
+            0.1285,
+            0.0664
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-clerk-1169.glb"
+        },
+        {
+          "id": "villager-teacher-1186",
+          "label": "Teacher 1186",
+          "role": "teacher",
+          "sourceNode": "Villager_teacher_1186",
+          "size": [
+            0.0892,
+            0.1572,
+            0.0665
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-teacher-1186.glb"
+        },
+        {
+          "id": "villager-teacher-1193",
+          "label": "Teacher 1193",
+          "role": "teacher",
+          "sourceNode": "Villager_teacher_1193",
+          "size": [
+            0.0895,
+            0.1386,
+            0.0735
+          ],
+          "meshCount": 7,
+          "file": "assets/extracted/villagers/villager-teacher-1193.glb"
+        },
+        {
+          "id": "villager-teacher-1200",
+          "label": "Teacher 1200",
+          "role": "teacher",
+          "sourceNode": "Villager_teacher_1200",
+          "size": [
+            0.0963,
+            0.158,
+            0.0719
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-teacher-1200.glb"
+        },
+        {
+          "id": "villager-clergy-1217",
+          "label": "Clergy 1217",
+          "role": "clergy",
+          "sourceNode": "Villager_clergy_1217",
+          "size": [
+            0.089,
+            0.127,
+            0.0664
+          ],
+          "meshCount": 7,
+          "file": "assets/extracted/villagers/villager-clergy-1217.glb"
+        },
+        {
+          "id": "villager-clergy-1224",
+          "label": "Clergy 1224",
+          "role": "clergy",
+          "sourceNode": "Villager_clergy_1224",
+          "size": [
+            0.094,
+            0.1544,
+            0.0702
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-clergy-1224.glb"
+        },
+        {
+          "id": "villager-clergy-1231",
+          "label": "Clergy 1231",
+          "role": "clergy",
+          "sourceNode": "Villager_clergy_1231",
+          "size": [
+            0.0969,
+            0.151,
+            0.0724
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-clergy-1231.glb"
+        },
+        {
+          "id": "villager-nurse-1248",
+          "label": "Nurse 1248",
+          "role": "nurse",
+          "sourceNode": "Villager_nurse_1248",
+          "size": [
+            0.0939,
+            0.1483,
+            0.0702
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-nurse-1248.glb"
+        },
+        {
+          "id": "villager-nurse-1255",
+          "label": "Nurse 1255",
+          "role": "nurse",
+          "sourceNode": "Villager_nurse_1255",
+          "size": [
+            0.094,
+            0.1284,
+            0.0702
+          ],
+          "meshCount": 7,
+          "file": "assets/extracted/villagers/villager-nurse-1255.glb"
+        },
+        {
+          "id": "villager-nurse-1262",
+          "label": "Nurse 1262",
+          "role": "nurse",
+          "sourceNode": "Villager_nurse_1262",
+          "size": [
+            0.0894,
+            0.1454,
+            0.0668
+          ],
+          "meshCount": 7,
+          "file": "assets/extracted/villagers/villager-nurse-1262.glb"
+        },
+        {
+          "id": "villager-watch-1279",
+          "label": "Watch 1279",
+          "role": "watch",
+          "sourceNode": "Villager_watch_1279",
+          "size": [
+            0.0954,
+            0.1662,
+            0.0761
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-watch-1279.glb"
+        },
+        {
+          "id": "villager-watch-1286",
+          "label": "Watch 1286",
+          "role": "watch",
+          "sourceNode": "Villager_watch_1286",
+          "size": [
+            0.0912,
+            0.151,
+            0.0728
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-watch-1286.glb"
+        },
+        {
+          "id": "villager-watch-1293",
+          "label": "Watch 1293",
+          "role": "watch",
+          "sourceNode": "Villager_watch_1293",
+          "size": [
+            0.0968,
+            0.1512,
+            0.0773
+          ],
+          "meshCount": 8,
+          "file": "assets/extracted/villagers/villager-watch-1293.glb"
+        }
+      ]
+    },
+    "buildings": {
+      "items": [
+        {
+          "id": "house",
+          "label": "House",
+          "file": "assets/world/buildings/house.glb",
+          "size": [
+            0.9147,
+            0.6791,
+            0.8694
+          ],
+          "footprint": [
+            0.9147,
+            0.8694
+          ],
+          "height": 0.6791
+        },
+        {
+          "id": "villa",
+          "label": "Villa",
+          "file": "assets/world/buildings/villa.glb",
+          "size": [
+            0.92,
+            0.8813,
+            0.9175
+          ],
+          "footprint": [
+            0.92,
+            0.9175
+          ],
+          "height": 0.8813
+        },
+        {
+          "id": "flats",
+          "label": "Flats",
+          "file": "assets/world/buildings/flats.glb",
+          "size": [
+            0.9502,
+            1.303,
+            0.94
+          ],
+          "footprint": [
+            0.9502,
+            0.94
+          ],
+          "height": 1.303
+        },
+        {
+          "id": "terrace",
+          "label": "Terrace",
+          "file": "assets/world/buildings/terrace.glb",
+          "size": [
+            1.8197,
+            0.728,
+            1.8649
+          ],
+          "footprint": [
+            1.8197,
+            1.8649
+          ],
+          "height": 0.728
+        },
+        {
+          "id": "market",
+          "label": "Market",
+          "file": "assets/world/buildings/market.glb",
+          "size": [
+            0.7088,
+            0.5,
+            0.5888
+          ],
+          "footprint": [
+            0.7088,
+            0.5888
+          ],
+          "height": 0.5
+        },
+        {
+          "id": "bakery",
+          "label": "Bakery",
+          "file": "assets/world/buildings/bakery.glb",
+          "size": [
+            0.81,
+            0.758,
+            0.8572
+          ],
+          "footprint": [
+            0.81,
+            0.8572
+          ],
+          "height": 0.758
+        },
+        {
+          "id": "tavern",
+          "label": "Tavern",
+          "file": "assets/world/buildings/tavern.glb",
+          "size": [
+            0.9,
+            0.9866,
+            0.9117
+          ],
+          "footprint": [
+            0.9,
+            0.9117
+          ],
+          "height": 0.9866
+        },
+        {
+          "id": "grocer",
+          "label": "Grocer",
+          "file": "assets/world/buildings/grocer.glb",
+          "size": [
+            0.78,
+            0.7398,
+            0.8822
+          ],
+          "footprint": [
+            0.78,
+            0.8822
+          ],
+          "height": 0.7398
+        },
+        {
+          "id": "coffeehouse",
+          "label": "Coffeehouse",
+          "file": "assets/world/buildings/coffeehouse.glb",
+          "size": [
+            0.76,
+            0.9108,
+            0.8404
+          ],
+          "footprint": [
+            0.76,
+            0.8404
+          ],
+          "height": 0.9108
+        },
+        {
+          "id": "inn",
+          "label": "Inn",
+          "file": "assets/world/buildings/inn.glb",
+          "size": [
+            1.8786,
+            0.918,
+            1.7182
+          ],
+          "footprint": [
+            1.8786,
+            1.7182
+          ],
+          "height": 0.918
+        },
+        {
+          "id": "stationer",
+          "label": "Stationer",
+          "file": "assets/world/buildings/stationer.glb",
+          "size": [
+            0.7,
+            0.9466,
+            0.853
+          ],
+          "footprint": [
+            0.7,
+            0.853
+          ],
+          "height": 0.9466
+        },
+        {
+          "id": "library",
+          "label": "Library",
+          "file": "assets/world/buildings/library.glb",
+          "size": [
+            1.8833,
+            0.96,
+            1.917
+          ],
+          "footprint": [
+            1.8833,
+            1.917
+          ],
+          "height": 0.96
+        },
+        {
+          "id": "watchhouse",
+          "label": "Watchhouse",
+          "file": "assets/world/buildings/watchhouse.glb",
+          "size": [
+            1.7755,
+            1.485,
+            1.8966
+          ],
+          "footprint": [
+            1.7755,
+            1.8966
+          ],
+          "height": 1.485
+        },
+        {
+          "id": "vicarage",
+          "label": "Vicarage",
+          "file": "assets/world/buildings/vicarage.glb",
+          "size": [
+            1.758,
+            1.1962,
+            1.9425
+          ],
+          "footprint": [
+            1.758,
+            1.9425
+          ],
+          "height": 1.1962
+        },
+        {
+          "id": "farm",
+          "label": "Farm",
+          "file": "assets/world/buildings/farm.glb",
+          "size": [
+            1.9387,
+            0.72,
+            1.4618
+          ],
+          "footprint": [
+            1.9387,
+            1.4618
+          ],
+          "height": 0.72
+        },
+        {
+          "id": "windgen",
+          "label": "Windgen",
+          "file": "assets/world/buildings/windgen.glb",
+          "size": [
+            0.85,
+            0.75,
+            0.775
+          ],
+          "footprint": [
+            0.85,
+            0.775
+          ],
+          "height": 0.75
+        },
+        {
+          "id": "well",
+          "label": "Well",
+          "file": "assets/world/buildings/well.glb",
+          "size": [
+            0.8133,
+            0.48,
+            0.7874
+          ],
+          "footprint": [
+            0.8133,
+            0.7874
+          ],
+          "height": 0.48
+        },
+        {
+          "id": "fountaingarden",
+          "label": "Fountaingarden",
+          "file": "assets/world/buildings/fountaingarden.glb",
+          "size": [
+            1.96,
+            0.3884,
+            1.945
+          ],
+          "footprint": [
+            1.96,
+            1.945
+          ],
+          "height": 0.3884
+        },
+        {
+          "id": "park",
+          "label": "Park",
+          "file": "assets/world/buildings/park.glb",
+          "size": [
+            1.88,
+            0.5324,
+            1.945
+          ],
+          "footprint": [
+            1.88,
+            1.945
+          ],
+          "height": 0.5324
+        },
+        {
+          "id": "station",
+          "label": "Station",
+          "file": "assets/world/buildings/station.glb",
+          "size": [
+            0.9225,
+            0.6292,
+            0.9485
+          ],
+          "footprint": [
+            0.9225,
+            0.9485
+          ],
+          "height": 0.6292
+        },
+        {
+          "id": "school",
+          "label": "School",
+          "file": "assets/world/buildings/school.glb",
+          "size": [
+            0.9517,
+            0.9049,
+            0.9049
+          ],
+          "footprint": [
+            0.9517,
+            0.9049
+          ],
+          "height": 0.9049
+        },
+        {
+          "id": "chapel",
+          "label": "Chapel",
+          "file": "assets/world/buildings/chapel.glb",
+          "size": [
+            0.9177,
+            1.09,
+            0.9389
+          ],
+          "footprint": [
+            0.9177,
+            0.9389
+          ],
+          "height": 1.09
+        },
+        {
+          "id": "townhall",
+          "label": "Townhall",
+          "file": "assets/world/buildings/townhall.glb",
+          "size": [
+            1.918,
+            1.635,
+            1.7167
+          ],
+          "footprint": [
+            1.918,
+            1.7167
+          ],
+          "height": 1.635
+        },
+        {
+          "id": "watermill",
+          "label": "Watermill",
+          "file": "assets/world/buildings/watermill.glb",
+          "size": [
+            0.7739,
+            0.7332,
+            0.7151
+          ],
+          "footprint": [
+            0.7739,
+            0.7151
+          ],
+          "height": 0.7332
+        },
+        {
+          "id": "garden",
+          "label": "Garden",
+          "file": "assets/world/buildings/garden.glb",
+          "size": [
+            0.807,
+            0.3589,
+            0.709
+          ],
+          "footprint": [
+            0.807,
+            0.709
+          ],
+          "height": 0.3589
+        },
+        {
+          "id": "statue",
+          "label": "Statue",
+          "file": "assets/world/buildings/statue.glb",
+          "size": [
+            0.9415,
+            0.607,
+            0.9305
+          ],
+          "footprint": [
+            0.9415,
+            0.9305
+          ],
+          "height": 0.607
+        },
+        {
+          "id": "pond",
+          "label": "Pond",
+          "file": "assets/world/buildings/pond.glb",
+          "size": [
+            0.9423,
+            0.3609,
+            0.8528
+          ],
+          "footprint": [
+            0.9423,
+            0.8528
+          ],
+          "height": 0.3609
+        },
+        {
+          "id": "playground",
+          "label": "Playground",
+          "file": "assets/world/buildings/playground.glb",
+          "size": [
+            0.8248,
+            0.4913,
+            0.8571
+          ],
+          "footprint": [
+            0.8248,
+            0.8571
+          ],
+          "height": 0.4913
+        },
+        {
+          "id": "allotment",
+          "label": "Allotment",
+          "file": "assets/world/buildings/allotment.glb",
+          "size": [
+            0.9187,
+            0.167,
+            0.9187
+          ],
+          "footprint": [
+            0.9187,
+            0.9187
+          ],
+          "height": 0.167
+        },
+        {
+          "id": "bandstand",
+          "label": "Bandstand",
+          "file": "assets/world/buildings/bandstand.glb",
+          "size": [
+            0.7845,
+            0.5027,
+            0.8181
+          ],
+          "footprint": [
+            0.7845,
+            0.8181
+          ],
+          "height": 0.5027
+        },
+        {
+          "id": "rosegarden",
+          "label": "Rosegarden",
+          "file": "assets/world/buildings/rosegarden.glb",
+          "size": [
+            0.925,
+            0.102,
+            0.9325
+          ],
+          "footprint": [
+            0.925,
+            0.9325
+          ],
+          "height": 0.102
+        },
+        {
+          "id": "lumber",
+          "label": "Lumber",
+          "file": "assets/world/buildings/lumber.glb",
+          "size": [
+            0.8779,
+            0.6171,
+            0.8554
+          ],
+          "footprint": [
+            0.8779,
+            0.8554
+          ],
+          "height": 0.6171
+        },
+        {
+          "id": "workshop",
+          "label": "Workshop",
+          "file": "assets/world/buildings/workshop.glb",
+          "size": [
+            0.8324,
+            0.695,
+            0.7607
+          ],
+          "footprint": [
+            0.8324,
+            0.7607
+          ],
+          "height": 0.695
+        },
+        {
+          "id": "fishery",
+          "label": "Fishery",
+          "file": "assets/world/buildings/fishery.glb",
+          "size": [
+            0.8432,
+            0.4891,
+            0.88
+          ],
+          "footprint": [
+            0.8432,
+            0.88
+          ],
+          "height": 0.4891
+        },
+        {
+          "id": "clinic",
+          "label": "Clinic",
+          "file": "assets/world/buildings/clinic.glb",
+          "size": [
+            0.81,
+            0.654,
+            0.8992
+          ],
+          "footprint": [
+            0.81,
+            0.8992
+          ],
+          "height": 0.654
+        },
+        {
+          "id": "mansion",
+          "label": "Mansion",
+          "file": "assets/world/buildings/mansion.glb",
+          "size": [
+            1.9205,
+            1.1425,
+            1.9251
+          ],
+          "footprint": [
+            1.9205,
+            1.9251
+          ],
+          "height": 1.1425
+        },
+        {
+          "id": "apartments",
+          "label": "Apartments",
+          "file": "assets/world/buildings/apartments.glb",
+          "size": [
+            1.925,
+            1.418,
+            1.8451
+          ],
+          "footprint": [
+            1.925,
+            1.8451
+          ],
+          "height": 1.418
+        },
+        {
+          "id": "musichall",
+          "label": "Musichall",
+          "file": "assets/world/buildings/musichall.glb",
+          "size": [
+            0.945,
+            0.8433,
+            0.911
+          ],
+          "footprint": [
+            0.945,
+            0.911
+          ],
+          "height": 0.8433
+        },
+        {
+          "id": "firestation",
+          "label": "Firestation",
+          "file": "assets/world/buildings/firestation.glb",
+          "size": [
+            0.8033,
+            1.0358,
+            0.9208
+          ],
+          "footprint": [
+            0.8033,
+            0.9208
+          ],
+          "height": 1.0358
+        },
+        {
+          "id": "builder",
+          "label": "Builder",
+          "file": "assets/world/buildings/builder.glb",
+          "size": [
+            0.9258,
+            0.3867,
+            0.8919
+          ],
+          "footprint": [
+            0.9258,
+            0.8919
+          ],
+          "height": 0.3867
+        },
+        {
+          "id": "orchard",
+          "label": "Orchard",
+          "file": "assets/world/buildings/orchard.glb",
+          "size": [
+            1.9387,
+            0.7129,
+            1.9388
+          ],
+          "footprint": [
+            1.9387,
+            1.9388
+          ],
+          "height": 0.7129
+        },
+        {
+          "id": "foundry",
+          "label": "Foundry",
+          "file": "assets/world/buildings/foundry.glb",
+          "size": [
+            0.9209,
+            1.0967,
+            0.8902
+          ],
+          "footprint": [
+            0.9209,
+            0.8902
+          ],
+          "height": 1.0967
+        }
+      ]
+    },
+    "terrain": {
+      "items": [
+        {
+          "id": "gentle-spring",
+          "label": "Gentle Spring",
+          "file": "assets/world/terrain/gentle-spring.glb",
+          "size": [
+            48.0,
+            5.2385,
+            48.0
+          ]
+        }
+      ]
+    }
+  },
+  "characters": [
+    {
+      "id": "villager-farmer-1000",
+      "label": "Farmer 1000",
+      "role": "farmer",
+      "sourceNode": "Villager_farmer_1000",
+      "height": 0.1358,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-farmer-1007",
+      "label": "Farmer 1007",
+      "role": "farmer",
+      "sourceNode": "Villager_farmer_1007",
+      "height": 0.1298,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-farmer-1014",
+      "label": "Farmer 1014",
+      "role": "farmer",
+      "sourceNode": "Villager_farmer_1014",
+      "height": 0.1502,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-builder-1031",
+      "label": "Builder 1031",
+      "role": "builder",
+      "sourceNode": "Villager_builder_1031",
+      "height": 0.1628,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-builder-1038",
+      "label": "Builder 1038",
+      "role": "builder",
+      "sourceNode": "Villager_builder_1038",
+      "height": 0.1263,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-builder-1045",
+      "label": "Builder 1045",
+      "role": "builder",
+      "sourceNode": "Villager_builder_1045",
+      "height": 0.1568,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-worker-1062",
+      "label": "Worker 1062",
+      "role": "worker",
+      "sourceNode": "Villager_worker_1062",
+      "height": 0.1312,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-worker-1069",
+      "label": "Worker 1069",
+      "role": "worker",
+      "sourceNode": "Villager_worker_1069",
+      "height": 0.1533,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-worker-1076",
+      "label": "Worker 1076",
+      "role": "worker",
+      "sourceNode": "Villager_worker_1076",
+      "height": 0.1295,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-fisher-1093",
+      "label": "Fisher 1093",
+      "role": "fisher",
+      "sourceNode": "Villager_fisher_1093",
+      "height": 0.1542,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-fisher-1100",
+      "label": "Fisher 1100",
+      "role": "fisher",
+      "sourceNode": "Villager_fisher_1100",
+      "height": 0.158,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-fisher-1107",
+      "label": "Fisher 1107",
+      "role": "fisher",
+      "sourceNode": "Villager_fisher_1107",
+      "height": 0.1282,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-shop-1124",
+      "label": "Shop 1124",
+      "role": "shop",
+      "sourceNode": "Villager_shop_1124",
+      "height": 0.1628,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-shop-1131",
+      "label": "Shop 1131",
+      "role": "shop",
+      "sourceNode": "Villager_shop_1131",
+      "height": 0.1395,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-shop-1138",
+      "label": "Shop 1138",
+      "role": "shop",
+      "sourceNode": "Villager_shop_1138",
+      "height": 0.1687,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-clerk-1155",
+      "label": "Clerk 1155",
+      "role": "clerk",
+      "sourceNode": "Villager_clerk_1155",
+      "height": 0.1594,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-clerk-1162",
+      "label": "Clerk 1162",
+      "role": "clerk",
+      "sourceNode": "Villager_clerk_1162",
+      "height": 0.1288,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-clerk-1169",
+      "label": "Clerk 1169",
+      "role": "clerk",
+      "sourceNode": "Villager_clerk_1169",
+      "height": 0.1285,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-teacher-1186",
+      "label": "Teacher 1186",
+      "role": "teacher",
+      "sourceNode": "Villager_teacher_1186",
+      "height": 0.1572,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-teacher-1193",
+      "label": "Teacher 1193",
+      "role": "teacher",
+      "sourceNode": "Villager_teacher_1193",
+      "height": 0.1386,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-teacher-1200",
+      "label": "Teacher 1200",
+      "role": "teacher",
+      "sourceNode": "Villager_teacher_1200",
+      "height": 0.158,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-clergy-1217",
+      "label": "Clergy 1217",
+      "role": "clergy",
+      "sourceNode": "Villager_clergy_1217",
+      "height": 0.127,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-clergy-1224",
+      "label": "Clergy 1224",
+      "role": "clergy",
+      "sourceNode": "Villager_clergy_1224",
+      "height": 0.1544,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-clergy-1231",
+      "label": "Clergy 1231",
+      "role": "clergy",
+      "sourceNode": "Villager_clergy_1231",
+      "height": 0.151,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-nurse-1248",
+      "label": "Nurse 1248",
+      "role": "nurse",
+      "sourceNode": "Villager_nurse_1248",
+      "height": 0.1483,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-nurse-1255",
+      "label": "Nurse 1255",
+      "role": "nurse",
+      "sourceNode": "Villager_nurse_1255",
+      "height": 0.1284,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-nurse-1262",
+      "label": "Nurse 1262",
+      "role": "nurse",
+      "sourceNode": "Villager_nurse_1262",
+      "height": 0.1454,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-watch-1279",
+      "label": "Watch 1279",
+      "role": "watch",
+      "sourceNode": "Villager_watch_1279",
+      "height": 0.1662,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-watch-1286",
+      "label": "Watch 1286",
+      "role": "watch",
+      "sourceNode": "Villager_watch_1286",
+      "height": 0.151,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    },
+    {
+      "id": "villager-watch-1293",
+      "label": "Watch 1293",
+      "role": "watch",
+      "sourceNode": "Villager_watch_1293",
+      "height": 0.1512,
+      "sourceFile": "assets/world/collections/kinstead-villagers-library.glb"
+    }
+  ],
+  "recommendedCharacters": [
+    "villager-farmer-1007",
+    "villager-builder-1031",
+    "villager-fisher-1093",
+    "villager-shop-1138",
+    "villager-clerk-1155",
+    "villager-teacher-1186",
+    "villager-nurse-1248",
+    "villager-watch-1279"
+  ]
+}

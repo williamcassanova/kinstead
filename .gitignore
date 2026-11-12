@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Environment dan rahasia
+.env
+.env.*
+!.env.example
+
+# Backup
+*.bak
+*.bak_*
+*.backup
+*.old
+
+# Log
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor internal
+.opencode/
